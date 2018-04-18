@@ -34,7 +34,7 @@ format-background = #00FF00
 format-underline =
 format-overline =
 format-spacing =
-format-padding = 2
+format-padding =
 format-margin =
 format-offset =
 
@@ -302,14 +302,14 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-border-size = 2
-;border-left-size = 25
+border-size = 0
+;border-left-size = 0
 ;border-right-size = 25
 ;border-top-size = 0
 ;border-bottom-size = 25
 border-color = #00000000
 
-padding-left = 1
+padding-left = 0
 padding-right = 1
 
 module-margin-left = 3
@@ -317,12 +317,12 @@ module-margin-right = 3
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = NotoSans-Regular:size=10;0
-font-1 = fontawesome-regular:size=10:0
+font-1 = fontawesome-regular:size=13:0
 font-2 = NotoMono-Regular: size=10;0
 
-modules-left = xwindow
-modules-center = networkspeedup networkspeeddown filesystem kernel volume cpu2
-modules-right =  pacman-updates aur-updates date
+modules-left = bspwm xwindow
+modules-center = kernel
+modules-right = pavolume memory2 cpu2 date
 
 tray-detached = false
 tray-offset-x = 0
@@ -465,121 +465,69 @@ format-background = ${colors.background}
 ################################################################################
 
 [module/bspwm]
-;https://github.com/jaagr/polybar/wiki/Module:-bspwm
 type = internal/bspwm
 
-; Only show workspaces defined on the same output as the bar
-; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
-; Default: true
+enable-click = true
+
+enable-scroll = true
+
+
+reverse-scroll = true
+
 pin-workspaces = true
 
-; Output mode flags after focused state label
-; Default: false
-inline-mode = false
+ws-icon-0 = 1; 
+ws-icon-1 = 2; 
+ws-icon-2 = 3; 
+ws-icon-3 = 4; 
+ws-icon-4 = 5; 
+ws-icon-default = " "
 
-; Create click handler used to focus workspace
-; Default: true
-enable-click = false
 
-; Create scroll handlers used to cycle workspaces
-; Default: true
-enable-scroll = false
-
-; Set the scroll cycle direction
-; Default: true
-reverse-scroll = false
-
-; Use fuzzy (partial) matching on labels when assigning
-; icons to workspaces
-; Example: code;♚ will apply the icon to all workspaces
-; containing 'code' in the label
-; Default: false
-fuzzy-match = true
-
-; ws-icon-[0-9]+ = label;icon
-; Note that the label needs to correspond with the bspwm workspace name
-ws-icon-0 = code;♚
-ws-icon-1 = office;♛
-ws-icon-2 = graphics;♜
-ws-icon-3 = mail;♝
-ws-icon-4 = web;♞
-ws-icon-default = ♟
-
-; Available tags:
-;   <label-monitor>
-;   <label-state> - gets replaced with <label-(focused|urgent|occupied|empty)>
-;   <label-mode> - gets replaced with <label-(monocle|tiled|fullscreen|floating|locked|sticky|private)>
-; Default: <label-state>
 format = <label-state> <label-mode>
 
-; Available tokens:
-;   %name%
-; Default: %name%
-label-monitor = %name%
-
-; If any values for label-dimmed-N are defined, the workspace/mode
-; colors will get overridden with those values if the monitor is out of focus
-; To only override workspaces in a specific state, use:
-;   label-dimmed-focused
-;   label-dimmed-occupied
-;   label-dimmed-urgent
-;   label-dimmed-empty
-label-dimmed-foreground = #555
-label-dimmed-underline = ${bar/top.background}
-label-dimmed-focused-background = #f00
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
 label-focused = %icon%
-label-focused-foreground = #ffffff
-label-focused-background = #3f3f3f
-label-focused-underline = #fba922
+label-focused-background = ${colors.background}
+label-focused-underline= #6790eb
+label-focused-padding = 4
+label-focused-foreground = ${colors.foreground}
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
+
 label-occupied = %icon%
-label-occupied-underline = #555555
+label-occupied-padding = 2
+label-occupied-background = ${colors.background}
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
 label-urgent = %icon%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-urgent-underline = #9b0a20
+label-urgent-padding = 2
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
 label-empty = %icon%
-label-empty-foreground = #55
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 2
+label-empty-background = ${colors.background}
+label-monocle = "  "
+label-monocle-foreground = ${colors.foreground}
+label-tiled = "  "
+label-tiled-foreground = ${colors.foreground}
+label-fullscreen = "  "
+label-fullscreen-foreground = ${colors.foreground}
+label-floating = "  "
+label-floating-foreground = ${colors.foreground}
+label-pseudotiled = "  "
+label-pseudotiled-foreground = ${colors.foreground}
+label-locked = "  "
+label-locked-foreground = ${colors.foreground}
+label-sticky = "  "
+label-sticky-foreground = ${colors.foreground}
+label-private =  "     "
+label-private-foreground = ${colors.foreground}
 
-; The following labels will be used to indicate the layout/mode
-; for the focused workspace. Requires <label-mode>
-;
-; Available tokens:
-;   None
-;label-monocle = 
-;label-tiled = 
-;label-fullscreen = 
-;label-floating = 
-;label-pseudotiled = P
-;label-locked = 
-;label-locked-foreground = #bd2c40
-;label-sticky = 
-;label-sticky-foreground = #fba922
-;label-private = 
-;label-private-foreground = #bd2c40
+; Separator in between workspaces
+;label-separator = |
+;label-separator-padding = 10
+;label-separator-foreground = #ffb52a
+
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 
 ################################################################################
@@ -1108,6 +1056,7 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+format-underline = #3EC13F
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
