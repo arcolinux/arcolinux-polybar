@@ -136,7 +136,6 @@ tray-padding = 2
 tray-scale = 1.0
 
 #i3: Make the bar appear below windows
-;wm-restack = bspwm
 ;wm-restack = i3
 ;override-redirect = true
 
@@ -468,12 +467,8 @@ format-background = ${colors.background}
 type = internal/bspwm
 
 enable-click = true
-
 enable-scroll = true
-
-
 reverse-scroll = true
-
 pin-workspaces = true
 
 ws-icon-0 = 1;
@@ -496,7 +491,6 @@ label-focused-background = ${colors.background}
 label-focused-underline= #6790eb
 label-focused-padding = 4
 label-focused-foreground = ${colors.foreground}
-
 
 label-occupied = %icon%
 label-occupied-padding = 2
