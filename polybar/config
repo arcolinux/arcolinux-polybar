@@ -301,6 +301,9 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
+wm-restack = bspwm
+override-redirect = true
+
 border-size = 0
 ;border-left-size = 0
 ;border-right-size = 25
