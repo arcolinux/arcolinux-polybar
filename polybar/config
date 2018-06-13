@@ -323,7 +323,7 @@ font-1 = fontawesome-regular:size=13:0
 font-2 = NotoMono-Regular: size=10;0
 
 modules-left = bspwm xwindow
-modules-center = kernel
+modules-center = kernel arch-aur-updates
 modules-right = pavolume memory2 cpu2 date
 
 tray-detached = false
@@ -537,6 +537,18 @@ format-background = ${colors.background}
 ############                       MODULES A-Z                      ############
 ################################################################################
 ################################################################################
+
+[module/arch-aur-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 1000
+label = Updates: %output%
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = #FFBB00
+format-underline = #FFBB00
+
 
 [module/aur-updates]
 type = custom/script
