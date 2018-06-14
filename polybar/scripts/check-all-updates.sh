@@ -1,7 +1,6 @@
 #!/bin/sh
+#source https://github.com/x70b1/polybar-scripts
 
-updates_arch=0
-updates_aur=0
 
 if ! updates_arch=$(checkupdates 2> /dev/null | wc -l ); then
     updates_arch=0

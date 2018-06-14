@@ -323,7 +323,7 @@ font-1 = fontawesome-regular:size=13:0
 font-2 = NotoMono-Regular: size=10;0
 
 modules-left = bspwm xwindow
-modules-center = kernel arch-aur-updates
+modules-center = kernel
 modules-right = pavolume memory2 cpu2 date
 
 tray-detached = false
