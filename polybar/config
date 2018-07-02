@@ -893,6 +893,16 @@ format-underline = #0084FF
 
 ################################################################################
 
+[module/jgmenu]
+type = custom/script
+interval = 120
+exec = echo "ArcoLinux"
+click-left = "jgmenu_run >/dev/null 2>&1 &"
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+################################################################################
+
 [module/load-average]
 type = custom/script
 exec = uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5"," }' | sed 's/,//g'
