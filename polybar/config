@@ -141,7 +141,7 @@ tray-scale = 1.0
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
-enable-ipc = false
+enable-ipc = true
 
 ; Fallback click handlers that will be called if
 ; there's no matching module handler found.
@@ -198,6 +198,10 @@ padding-right = 1
 
 module-margin-left = 3
 module-margin-right = 3
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = NotoSans-Regular:size=10;0
@@ -257,6 +261,10 @@ padding-right = 1
 module-margin-left = 3
 module-margin-right = 3
 
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = NotoSans-Regular:size=10;0
 font-1 = fontawesome-regular:size=10:0
@@ -303,6 +311,10 @@ line-color = #f00
 
 wm-restack = bspwm
 override-redirect = true
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
 
 border-size = 0
 ;border-left-size = 0
