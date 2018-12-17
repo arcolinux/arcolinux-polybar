@@ -393,7 +393,7 @@ module-margin-right = 3
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
-;enable-ipc = true
+enable-ipc = true
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = NotoSans-Regular:size=10;0
