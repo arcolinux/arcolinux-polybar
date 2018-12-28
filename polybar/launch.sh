@@ -3,7 +3,7 @@
 # More info : https://github.com/jaagr/polybar/wiki
 
 # Install the following applications for polybar and icons in polybar if you are on ArcoLinuxD
-# yaourt -S polybar awesome-terminal-fonts
+# awesome-terminal-fonts
 # Tip : There are other interesting fonts that provide icons like nerd-fonts-complete
 
 # Terminate already running bar instances
@@ -50,7 +50,7 @@ case $desktop in
     polybar --reload mainbar-bspwm -c ~/.config/polybar/config &
     fi
     ;;
-    
+
     xmonad)
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
