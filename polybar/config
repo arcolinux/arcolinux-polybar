@@ -113,9 +113,9 @@ module-margin-left = 3
 module-margin-right = 3
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = NotoSans-Regular:size=10;0
-font-1 = fontawesome-regular:size=10:0
-font-2 = NotoMono-Regular: size=10;0
+font-0 = "NotoSans-Regular:size=10;0"
+font-1 = "fontawesome-regular:size=10;0"
+font-2 = "NotoMono-Regular:size=10;0"
 
 modules-left = i3 xwindow
 modules-center = networkspeedup networkspeeddown
@@ -204,9 +204,9 @@ module-margin-right = 3
 enable-ipc = true
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = NotoSans-Regular:size=10;0
-font-1 = fontawesome-regular:size=10:0
-font-2 = NotoMono-Regular: size=10;0
+font-0 = "NotoSans-Regular:size=10;0"
+font-1 = "fontawesome-regular:size=10;0"
+font-2 = "NotoMono-Regular:size=10;0"
 
 modules-left = ewmh xwindow
 modules-center = release kernel
@@ -266,9 +266,9 @@ module-margin-right = 3
 enable-ipc = true
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = NotoSans-Regular:size=10;0
-font-1 = fontawesome-regular:size=10:0
-font-2 = NotoMono-Regular: size=10;0
+font-0 = "NotoSans-Regular:size=10;0"
+font-1 = "fontawesome-regular:size=10;0"
+font-2 = "NotoMono-Regular:size=10;0"
 
 modules-left = spotify1
 modules-center = networkspeedup networkspeeddown
@@ -330,9 +330,9 @@ module-margin-left = 3
 module-margin-right = 3
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = NotoSans-Regular:size=10;0
-font-1 = fontawesome-regular:size=13:0
-font-2 = NotoMono-Regular: size=10;0
+font-0 = "NotoSans-Regular:size=10;0"
+font-1 = "fontawesome-regular:size=13;0"
+font-2 = "NotoMono-Regular:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = kernel
@@ -396,9 +396,9 @@ module-margin-right = 3
 enable-ipc = true
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = NotoSans-Regular:size=10;0
-font-1 = fontawesome-regular:size=13:0
-font-2 = NotoMono-Regular: size=10;0
+font-0 = "NotoSans-Regular:size=10;0"
+font-1 = "fontawesome-regular:size=13;0"
+font-2 = "NotoMono-Regular:size=10;0"
 
 modules-left = ewmh
 modules-center = kernel
