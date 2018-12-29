@@ -128,7 +128,6 @@ separator = |
 tray-position = right
 tray-detached = false
 tray-maxsize = 20
-tray-transparent = false
 tray-background = ${colors.background}
 tray-offset-x = 0
 tray-offset-y = 0
@@ -219,7 +218,6 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 20
 tray-scale = 1.0
-tray-transparent = false
 tray-background = ${colors.background}
 
 
@@ -281,7 +279,6 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 20
 tray-scale = 1.0
-tray-transparent = false
 tray-background = ${colors.background}
 
 
@@ -345,7 +342,6 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 20
 tray-scale = 1.0
-tray-transparent = false
 tray-background = #2e3440
 
 scroll-up = bspwm-desknext
@@ -411,7 +407,6 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 20
 tray-scale = 1.0
-tray-transparent = false
 tray-background = ${colors.background}
 
 
