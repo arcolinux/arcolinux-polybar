@@ -115,7 +115,7 @@ module-margin-right = 3
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=10;0"
-font-2 = "Noto Sans Mono:size=10;0"
+font-2 = "Noto Sans:size=10;0"
 
 modules-left = i3 xwindow
 modules-center = kernel
@@ -205,7 +205,7 @@ enable-ipc = true
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=10;0"
-font-2 = "Noto Sans Mono:size=10;0"
+font-2 = "Noto Sans:size=10;0"
 
 modules-left = ewmh xwindow
 modules-center = release kernel
@@ -266,7 +266,7 @@ enable-ipc = true
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=10;0"
-font-2 = "Noto Sans Mono:size=10;0"
+font-2 = "Noto Sans:size=10;0"
 
 modules-left = spotify1
 modules-center = networkspeedup networkspeeddown
@@ -329,7 +329,7 @@ module-margin-right = 3
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
-font-2 = "Noto Sans Mono:size=10;0"
+font-2 = "Noto Sans:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = kernel
@@ -394,7 +394,7 @@ enable-ipc = true
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
-font-2 = "Noto Sans Mono:size=10;0"
+font-2 = "Noto Sans:size=10;0"
 
 modules-left = ewmh
 modules-center = kernel
