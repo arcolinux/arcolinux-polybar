@@ -116,6 +116,7 @@ module-margin-right = 3
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
+font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = i3 xwindow
 modules-center = kernel
@@ -206,6 +207,7 @@ enable-ipc = true
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
+font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = ewmh xwindow
 modules-center = release kernel
@@ -267,6 +269,7 @@ enable-ipc = true
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
+font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = spotify1
 modules-center = networkspeedup networkspeeddown
@@ -330,6 +333,7 @@ module-margin-right = 3
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
+font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = kernel
@@ -395,6 +399,7 @@ enable-ipc = true
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
+font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = ewmh
 modules-center = kernel
@@ -764,28 +769,28 @@ format-padding = 2
 label-font = 3
 label = Cpu %percentage:3%%
 ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
+ramp-coreload-0-font = 3
 ramp-coreload-0-foreground = #aaff77
 ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
+ramp-coreload-1-font = 3
 ramp-coreload-1-foreground = #aaff77
 ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
+ramp-coreload-2-font = 3
 ramp-coreload-2-foreground = #aaff77
 ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
+ramp-coreload-3-font = 3
 ramp-coreload-3-foreground = #aaff77
 ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
+ramp-coreload-4-font = 3
 ramp-coreload-4-foreground = #fba922
 ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
+ramp-coreload-5-font = 3
 ramp-coreload-5-foreground = #fba922
 ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
+ramp-coreload-6-font = 3
 ramp-coreload-6-foreground = #ff5555
 ramp-coreload-7 = █
-ramp-coreload-7-font = 2
+ramp-coreload-7-font = 3
 ramp-coreload-7-foreground = #ff5555
 
 ################################################################################
