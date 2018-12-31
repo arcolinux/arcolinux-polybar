@@ -10,6 +10,7 @@
 # you will the city code at the end
 # create an account on this website
 # create an api key (free)
+# LANG included thanks to krive001 on discord
 
 
 import requests
@@ -19,8 +20,11 @@ API_KEY = "756edce7e9d4c385ef9499a53492678c"
 UNITS = "Metric"
 UNIT_KEY = "C"
 #UNIT_KEY = "F"
+LANG = "en"
+#LANG = "nl"
+#LANG = "hu"
 
-REQ = requests.get("http://api.openweathermap.org/data/2.5/weather?id={}&appid={}&units={}".format(CITY, API_KEY, UNITS))
+REQ = requests.get("http://api.openweathermap.org/data/2.5/weather?id={}&lang={}&appid={}&units={}".format(CITY, LANG,  API_KEY, UNITS))
 try:
     # HTTP CODE = OK
     if REQ.status_code == 200:
