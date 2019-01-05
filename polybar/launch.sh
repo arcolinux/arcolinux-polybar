@@ -56,12 +56,10 @@ case $desktop in
     xmonad)
     if [ $count = 1 ]; then
       polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
-      else
+    else
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
       done
-    else
-    polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
     fi
     ;;
 esac
