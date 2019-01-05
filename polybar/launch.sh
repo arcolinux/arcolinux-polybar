@@ -13,6 +13,8 @@ killall -q polybar
 while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 
 desktop=$(echo $DESKTOP_SESSION)
+count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
+
 
 case $desktop in
     i3)
@@ -52,7 +54,9 @@ case $desktop in
     ;;
 
     xmonad)
-    if type "xrandr" > /dev/null; then
+    if [ $count = 1 ]; then
+      polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+      else
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
       done
