@@ -857,8 +857,8 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix-foreground = #738adb
 format-underline = #738adb
-click-right = discord &
 click-left = discord &
+click-right = killall Discord && killall Discord
 format-prefix = ""
 
 #################################################################
