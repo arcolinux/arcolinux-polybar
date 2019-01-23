@@ -1155,7 +1155,7 @@ format-underline = #FFBB00
 
 [module/pamac-manager]
 type = custom/script
-exec = pamac checkupdates -q | sed -n '1!p' | wc -l
+exec = pamac checkupdates -q | wc -l
 interval = 1000
 label = Pamac : %output%
 tail = true
