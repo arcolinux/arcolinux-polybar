@@ -400,19 +400,20 @@ font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
+font-4 = "FontAwesome5Brands:size=13;0"
 
 modules-left = ewmh
-modules-center = kernel
-modules-right =  pavolume memory2 cpu2 date
+modules-center = kernel pamac-manager
+modules-right =  pavolume memory2 cpu2 date discord variety
 
-tray-detached = false
-tray-offset-x = 0
-tray-offset-y = 0
-tray-position = right
-tray-padding = 2
-tray-maxsize = 20
-tray-scale = 1.0
-tray-background = ${colors.background}
+;tray-detached = false
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-position = right
+;tray-padding = 2
+;tray-maxsize = 20
+;tray-scale = 1.0
+;tray-background = ${colors.background}
 
 
 ################################################################################
@@ -846,6 +847,22 @@ label = %date% %time%
 
 #################################################################
 
+[module/discord]
+type = custom/script
+exec = echo " Discord "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix-foreground = #738adb
+format-underline = #738adb
+click-right = discord &
+click-left = discord &
+format-prefix = ""
+
+#################################################################
+
 [module/ewmh]
 type = internal/xworkspaces
 
@@ -1136,6 +1153,22 @@ format-underline = #FFBB00
 
 ################################################################################
 
+[module/pamac-manager]
+type = custom/script
+exec = pamac checkupdates -q | sed -n '1!p' | wc -l
+interval = 1000
+label = Pamac : %output%
+tail = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix-foreground = #738adb
+format-underline = #738adb
+click-right = pamac-manager &
+click-left = pamac-manager &
+format-prefix = " "
+
+################################################################################
+
 [module/pavolume]
 type = custom/script
 tail = true
@@ -1269,6 +1302,22 @@ format-background = ${colors.background}
 format-prefix = " "
 format-prefix-foreground = #C15D3E
 format-underline = #C15D3E
+
+################################################################################
+
+[module/variety]
+type = custom/script
+exec = echo " Variety"
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #0084FF
+click-right = variety --preferences
+click-left = variety --selector
 
 ################################################################################
 
