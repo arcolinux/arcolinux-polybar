@@ -26,7 +26,7 @@ case $desktop in
     else
     polybar --reload mainbar-i3 -c ~/.config/polybar/config &
     fi
-    # second polybar at bottom  
+    # second polybar at bottom
     # if type "xrandr" > /dev/null; then
     #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     #     MONITOR=$m polybar --reload mainbar-i3-extra -c ~/.config/polybar/config &
@@ -44,7 +44,7 @@ case $desktop in
     else
     polybar --reload mainbar-openbox -c ~/.config/polybar/config &
     fi
-    # second polybar at bottom  
+    # second polybar at bottom
     # if type "xrandr" > /dev/null; then
     #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     #     MONITOR=$m polybar --reload mainbar-openbox-extra -c ~/.config/polybar/config &
@@ -62,7 +62,7 @@ case $desktop in
     else
     polybar --reload mainbar-bspwm -c ~/.config/polybar/config &
     fi
-    # second polybar at bottom  
+    # second polybar at bottom
     # if type "xrandr" > /dev/null; then
     #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     #     MONITOR=$m polybar --reload mainbar-bspwm-extra -c ~/.config/polybar/config &

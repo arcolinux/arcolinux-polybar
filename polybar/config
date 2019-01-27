@@ -213,9 +213,9 @@ font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = i3 xwindow
-modules-center = kernel
-modules-right = memory2 cpu2 date
+modules-left = load-average
+modules-center = networkspeeddown networkspeedup
+modules-right = filesystem
 
 separator = |
 
@@ -366,9 +366,9 @@ font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = spotify1
-modules-center = networkspeedup networkspeeddown
-modules-right =  filesystem
+modules-left = load-average
+modules-center = networkspeeddown networkspeedup
+modules-right = filesystem
 
 tray-detached = false
 tray-offset-x = 0
@@ -497,9 +497,9 @@ font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = bspwm xwindow
-modules-center = kernel
-modules-right = pavolume memory2 cpu2 date
+modules-left = load-average
+modules-center = networkspeeddown networkspeedup
+modules-right = filesystem
 
 tray-detached = false
 tray-offset-x = 0
@@ -629,7 +629,7 @@ font-4 = "FontAwesome5Brands:size=13;0"
 
 modules-left = load-average
 modules-center = networkspeeddown networkspeedup
-modules-right =  filesystem
+modules-right = filesystem
 
 ;tray-detached = false
 ;tray-offset-x = 0
