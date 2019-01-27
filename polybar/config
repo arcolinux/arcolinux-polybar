@@ -564,9 +564,8 @@ font-3 = "Noto Sans Mono:size=10;0"
 font-4 = "FontAwesome5Brands:size=13;0"
 
 modules-left = ewmh
-modules-center = kernel pamac-manager
-modules-right =  pavolume memory2 cpu2 date
-; modules-right =  pavolume memory2 cpu2 date discord variety
+modules-center = kernel
+modules-right = pavolume memory2 cpu2 date
 
 tray-detached = false
 tray-offset-x = 0
