@@ -72,6 +72,24 @@ case $desktop in
     # fi
     ;;
 
+    herbstluftwm)
+    if type "xrandr" > /dev/null; then
+      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        MONITOR=$m polybar --reload mainbar-herbstluftwm -c ~/.config/polybar/config &
+      done
+    else
+    polybar --reload mainbar-herbstluftwm -c ~/.config/polybar/config &
+    fi
+    # second polybar at bottom
+    # if type "xrandr" > /dev/null; then
+    #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    #     MONITOR=$m polybar --reload mainbar-herbstluftwm-extra -c ~/.config/polybar/config &
+    #   done
+    # else
+    # polybar --reload mainbar-herbstluftwm-extra -c ~/.config/polybar/config &
+    # fi
+    ;;
+
     xmonad)
     if [ $count = 1 ]; then
       m=$(xrandr --query | grep " connected" | cut -d" " -f1)
