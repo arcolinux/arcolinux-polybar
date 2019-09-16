@@ -577,8 +577,8 @@ tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+scroll-up = herbstclient use_index -1
+scroll-down = herbstclient use_index +1
 
 
 ################################################################################
@@ -644,8 +644,8 @@ modules-right = filesystem
 ;tray-position = right
 ;tray-background = ${colors.background}
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+scroll-up = herbstclient use_index -1
+scroll-down = herbstclient use_index +1
 
 ################################################################################
 ################################################################################
