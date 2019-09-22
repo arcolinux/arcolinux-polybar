@@ -1244,7 +1244,7 @@ label-active = %name%
 label-active-foreground = ${colors.foreground}
 label-active-background = ${colors.background}
 label-active-underline= #6790eb
-label-active-padding = 4
+label-active-padding = 2
 
 label-occupied = %name%
 label-occupied-background = ${colors.background}
