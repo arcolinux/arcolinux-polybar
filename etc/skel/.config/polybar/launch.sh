@@ -18,7 +18,7 @@ count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
 
 case $desktop in
 
-    i3)
+    i3|/usr/share/xsessions/i3)
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-i3 -c ~/.config/polybar/config &
@@ -36,7 +36,7 @@ case $desktop in
     # fi
     ;;
 
-    openbox)
+    openbox|/usr/share/xsessions/openbox)
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-openbox -c ~/.config/polybar/config &
@@ -54,7 +54,7 @@ case $desktop in
     # fi
     ;;
 
-    bspwm)
+    bspwm|/usr/share/xsessions/bspwm)
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-bspwm -c ~/.config/polybar/config &
@@ -72,7 +72,7 @@ case $desktop in
     # fi
     ;;
 
-    herbstluftwm)
+    herbstluftwm|/usr/share/xsessions/herbstluftwm)
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-herbstluftwm -c ~/.config/polybar/config &
@@ -90,7 +90,7 @@ case $desktop in
     # fi
     ;;
 
-    xmonad)
+    xmonad|/usr/share/xsessions/xmonad)
     if [ $count = 1 ]; then
       m=$(xrandr --query | grep " connected" | cut -d" " -f1)
       MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
