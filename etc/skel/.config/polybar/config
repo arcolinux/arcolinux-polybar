@@ -1088,18 +1088,6 @@ animation-charging-framerate = 750
 
 ################################################################################
 
-[module/compton]
-;https://github.com/jaagr/polybar/wiki/User-contributed-modules#compton
-type = custom/script
-exec = ~/.config/polybar/scripts/compton.sh
-click-left = ~/.config/polybar/scripts/compton-toggle.sh
-interval = 5
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-;format-underline = #00AF02
-
-################################################################################
-
 [module/cpu1]
 ;https://github.com/jaagr/polybar/wiki/Module:-cpu
 type = internal/cpu
