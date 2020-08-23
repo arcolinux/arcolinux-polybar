@@ -110,7 +110,7 @@ case $desktop in
     # fi
     ;;
 
-	spectrwm|/usr/share/xsessions/spectrwm)
+    spectrwm|/usr/share/xsessions/spectrwm)
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-spectrwm -c ~/.config/polybar/config &
