@@ -1064,11 +1064,12 @@ label-focused = %icon%
 label-focused-background = ${colors.background}
 label-focused-underline= #6790eb
 label-focused-padding = 4
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = #6790EB
 
 label-occupied = %icon%
 label-occupied-padding = 2
 label-occupied-background = ${colors.background}
+label-occupied-foreground = #6790EB
 
 label-urgent = %icon%
 label-urgent-padding = 2
