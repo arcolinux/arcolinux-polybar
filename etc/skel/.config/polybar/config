@@ -1124,9 +1124,20 @@ format-underline = #FFBB00
 
 [module/aur-updates]
 type = custom/script
-exec = cower -u | wc -l
+exec = ~/.config/polybar/scripts/check-aur-updates.sh
 interval = 1000
 label = Aur: %output%
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = #FFBB00
+format-underline = #FFBB00
+
+[module/arch-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-arch-updates.sh
+interval = 1000
+label = Arch: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
