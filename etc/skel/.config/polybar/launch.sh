@@ -127,6 +127,14 @@ case $desktop in
       done
     else
     polybar --reload mainbar-cwm -c ~/.config/polybar/config &
-    fi
+        fi
+     # second polybar at bottom
+     # if type "xrandr" > /dev/null; then
+     #  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+     #    MONITOR=$m polybar --reload mainbar-cwm-extra -c ~/.config/polybar/config &
+     #  done
+     # else
+     # polybar --reload mainbar-cwm-extra -c ~/.config/polybar/config &
+     # fi
     ;;
 esac
