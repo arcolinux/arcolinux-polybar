@@ -1268,8 +1268,8 @@ format-discharging-background = ${colors.background}
 format-full-prefix = " "
 format-full-prefix-foreground = #a3c725
 format-full-underline = #a3c725
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+format-full-foreground = ${colors.foreground}
+format-full-background = ${colors.background}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
