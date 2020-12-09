@@ -865,7 +865,7 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-wm-restack = cwm
+wm-restack = bspwm
 override-redirect = true
 
 ; Enable support for inter-process messaging
