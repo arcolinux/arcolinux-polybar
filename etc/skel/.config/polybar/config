@@ -864,7 +864,7 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-;override-redirect = true
+override-redirect = true
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
