@@ -127,7 +127,8 @@ case $desktop in
       done
     else
     polybar --log=error --reload mainbar-cwm -c ~/.config/polybar/config &
-        fi
+    fi
+
      # second polybar at bottom
      # if type "xrandr" > /dev/null; then
      #  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
@@ -136,5 +137,8 @@ case $desktop in
      # else
      # polybar --reload mainbar-cwm-extra -c ~/.config/polybar/config &
      # fi
+
+     sleep 5 && sh ~/.config/polybar/launch.sh &
+
     ;;
 esac
