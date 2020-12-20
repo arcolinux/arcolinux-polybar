@@ -1787,6 +1787,8 @@ label = %output:0:150%
 ################################################################################
 
 [module/spotify2]
+;install zscroll
+:https://github.com/PrayagS/polybar-spotify
 type = custom/script
 tail = true
 format-prefix = "  "
