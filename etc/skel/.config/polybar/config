@@ -1805,6 +1805,7 @@ format = <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 click-left = playerctl previous spotify
+click-right = spotify
 
 [module/spotify-play-pause]
 type = custom/ipc
@@ -1823,6 +1824,7 @@ format = <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 click-left = playerctl next spotify
+click-right = spotify
 
 ################################################################################
 
