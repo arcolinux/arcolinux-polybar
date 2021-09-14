@@ -159,4 +159,23 @@ case $desktop in
      # fi
 
     ;;
+
+    wmderland|/usr/share/xsessions/wmderland)
+    if type "xrandr" > /dev/null; then
+      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        MONITOR=$m polybar --reload mainbar-wmderland -c ~/.config/polybar/config &
+      done
+    else
+    polybar --reload mainbar-wmderland -c ~/.config/polybar/config &
+    fi
+    # second polybar at bottom
+    # if type "xrandr" > /dev/null; then
+    #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    #     MONITOR=$m polybar --reload mainbar-wmderland-extra -c ~/.config/polybar/config &
+    #   done
+    # else
+    # polybar --reload mainbar-wmderland-extra -c ~/.config/polybar/config &
+    # fi
+    ;;
+
 esac
