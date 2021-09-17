@@ -178,4 +178,22 @@ case $desktop in
     # fi
     ;;
 
+    leftwm|/usr/share/xsessions/leftwm)
+    if type "xrandr" > /dev/null; then
+      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        MONITOR=$m polybar --reload mainbar-leftwm -c ~/.config/polybar/config &
+      done
+    else
+    polybar --reload mainbar-leftwm -c ~/.config/polybar/config &
+    fi
+    # second polybar at bottom
+    # if type "xrandr" > /dev/null; then
+    #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    #     MONITOR=$m polybar --reload mainbar-leftwm-extra -c ~/.config/polybar/config &
+    #   done
+    # else
+    # polybar --reload mainbar-leftwm-extra -c ~/.config/polybar/config &
+    # fi
+    ;;
+
 esac
