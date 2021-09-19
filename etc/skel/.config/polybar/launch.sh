@@ -18,7 +18,7 @@ count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
 
 case $desktop in
 
-    i3|/usr/share/xsessions/i3)
+    i3|/usr/share/xsessions/i3|i3-with-shmlog)
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-i3 -c ~/.config/polybar/config &
