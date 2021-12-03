@@ -1154,7 +1154,7 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 font-4 = "FontAwesome5Brands:size=13;0"
 
-modules-left = ewmh
+modules-left = xworkspaces
 modules-center = kernel
 modules-right = pavolume memory2 cpu2 date
 
@@ -2475,3 +2475,45 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ###############################################################################
+
+
+[module/xworkspaces]
+type = internal/xworkspaces
+
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+#icon-5 = 6;
+format = <label-state>
+label-monitor = %name%
+
+label-active = %index%
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.background}
+label-active-underline= #6790eb
+label-active-padding = 2
+
+label-occupied = %index%
+label-occupied-background = ${colors.background}
+label-occupied-padding = 2
+
+label-urgent = %index%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.alert}
+label-urgent-padding = 2
+
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
