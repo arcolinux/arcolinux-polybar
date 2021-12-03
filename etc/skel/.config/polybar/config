@@ -2504,7 +2504,7 @@ label-active-underline= #6790eb
 label-active-padding = 2
 
 label-occupied = %index%
-label-occupied-foreground = ${colors.occupied}
+label-occupied-foreground = ${colors.foreground}
 label-occupied-background = ${colors.background}
 label-occupied-padding = 2
 
