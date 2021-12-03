@@ -41,6 +41,8 @@ format-offset =
 ; Nord theme ============
 background = #2F343F
 foreground = #f3f4f5
+occupied = #cccccc
+active = #5e81ac
 alert = #d08770
 volume-min = #a3be8c
 volume-med = #ebcb8b
@@ -2496,12 +2498,13 @@ format = <label-state>
 label-monitor = %name%
 
 label-active = %index%
-label-active-foreground = ${colors.foreground}
+label-active-foreground = ${colors.active}
 label-active-background = ${colors.background}
 label-active-underline= #6790eb
 label-active-padding = 2
 
 label-occupied = %index%
+label-occupied-foreground = ${colors.occupied}
 label-occupied-background = ${colors.background}
 label-occupied-padding = 2
 
