@@ -90,6 +90,24 @@ case $desktop in
     # fi
     ;;
 
+    worm|/usr/share/xsessions/worm)
+    if type "xrandr" > /dev/null; then
+      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        MONITOR=$m polybar --reload mainbar-worm -c ~/.config/polybar/config &
+      done
+    else
+    polybar --reload mainbar-worm -c ~/.config/polybar/config &
+    fi
+    # second polybar at bottom
+    # if type "xrandr" > /dev/null; then
+    #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    #     MONITOR=$m polybar --reload mainbar-worm-extra -c ~/.config/polybar/config &
+    #   done
+    # else
+    # polybar --reload mainbar-worm-extra -c ~/.config/polybar/config &
+    # fi
+    ;;
+
     xmonad|/usr/share/xsessions/xmonad)
     if [ $count = 1 ]; then
       m=$(xrandr --query | grep " connected" | cut -d" " -f1)
