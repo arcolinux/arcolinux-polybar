@@ -805,7 +805,6 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-;wm-restack = bspwm
 override-redirect = true
 
 ; Enable support for inter-process messaging
@@ -831,7 +830,7 @@ font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = ewmh xwindow
+modules-left = ewmh-noscroll xwindow
 modules-center = kernel
 modules-right = pavolume memory2 cpu2 date
 
@@ -843,10 +842,6 @@ tray-maxsize = 20
 tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
-
-;scroll-up = herbstclient use_index -1
-;scroll-down = herbstclient use_index +1
-
 
 ################################################################################
 ################################################################################
@@ -872,7 +867,6 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-;wm-restack = bspwm
 override-redirect = true
 
 ; Enable support for inter-process messaging
@@ -910,9 +904,6 @@ modules-right = filesystem
 ;tray-scale = 1.0
 ;tray-position = right
 ;tray-background = ${colors.background}
-
-;scroll-up = herbstclient use_index -1
-;scroll-down = herbstclient use_index +1
 
 ################################################################################
 ################################################################################
@@ -1157,7 +1148,7 @@ font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left =  ewmh xwindow
+modules-left = ewmh xwindow
 modules-center = kernel
 modules-right = pavolume memory2 cpu2 date
 
@@ -1289,7 +1280,7 @@ font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left =  ewmh xwindow
+modules-left = ewmh xwindow
 modules-center = kernel
 modules-right = pavolume memory2 cpu2 date
 
@@ -2071,6 +2062,47 @@ enable-click = true
 enable-scroll = true
 reverse-scroll = true
 
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+#icon-5 = 6;
+format = <label-state>
+label-monitor = %name%
+
+label-active = %name%
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.background}
+label-active-underline= #6790eb
+label-active-padding = 2
+
+label-occupied = %name%
+label-occupied-background = ${colors.background}
+label-occupied-padding = 2
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %name%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+
+#################################################################
+
+[module/ewmh-noscroll]
+type = internal/xworkspaces
+
+pin-workspaces = false
+enable-click = true
+enable-scroll = false
+reverse-scroll = false
 
 icon-0 = 1;
 icon-1 = 2;
@@ -2097,13 +2129,11 @@ label-urgent-background = ${colors.alert}
 label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
 
-
 label-empty = %name%
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-
 
 ################################################################################
 
