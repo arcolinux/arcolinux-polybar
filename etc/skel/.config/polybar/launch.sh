@@ -108,6 +108,24 @@ case $desktop in
     # fi
     ;;
 
+    berry|/usr/share/xsessions/berry)
+    if type "xrandr" > /dev/null; then
+      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        MONITOR=$m polybar --reload mainbar-berry -c ~/.config/polybar/config &
+      done
+    else
+    polybar --reload mainbar-berry -c ~/.config/polybar/config &
+    fi
+    # second polybar at bottom
+    # if type "xrandr" > /dev/null; then
+    #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    #     MONITOR=$m polybar --reload mainbar-berry-extra -c ~/.config/polybar/config &
+    #   done
+    # else
+    # polybar --reload mainbar-berry-extra -c ~/.config/polybar/config &
+    # fi
+    ;;
+
     xmonad|/usr/share/xsessions/xmonad)
     if [ $count = 1 ]; then
       m=$(xrandr --query | grep " connected" | cut -d" " -f1)
