@@ -41,7 +41,9 @@ format-offset =
 ; Nord theme ============
 background = #2F343F
 foreground = #f3f4f5
+foreground-active = #f051ea
 occupied = #cccccc
+occupied-active = #6790EB
 active = #5e81ac
 alert = #d08770
 volume-min = #a3be8c
@@ -2072,17 +2074,18 @@ format = <label-state>
 label-monitor = %name%
 
 label-active = %name%
-label-active-foreground = ${colors.foreground}
+label-active-foreground = ${colors.foreground-active}
 label-active-background = ${colors.background}
 label-active-underline= #6790eb
 label-active-padding = 2
 
 label-occupied = %name%
+label-occupied-foreground = ${colors.occupied-active}
 label-occupied-background = ${colors.background}
 label-occupied-padding = 2
 
 label-urgent = %name%
-label-urgent-foreground = ${colors.foreground}
+label-urgent-foreground = ${colors.alert}
 label-urgent-background = ${colors.alert}
 label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
@@ -2114,7 +2117,7 @@ format = <label-state>
 label-monitor = %name%
 
 label-active = %name%
-label-active-foreground = ${colors.foreground}
+label-active-foreground = ${colors.foreground-active}
 label-active-background = ${colors.background}
 label-active-underline= #6790eb
 label-active-padding = 2
