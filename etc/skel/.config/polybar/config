@@ -2085,7 +2085,7 @@ label-occupied-background = ${colors.background}
 label-occupied-padding = 2
 
 label-urgent = %name%
-label-urgent-foreground = ${colors.alert}
+label-urgent-foreground = ${colors.foreground}
 label-urgent-background = ${colors.alert}
 label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
@@ -2123,6 +2123,7 @@ label-active-underline= #6790eb
 label-active-padding = 2
 
 label-occupied = %name%
+label-occupied-foreground = ${colors.occupied-active}
 label-occupied-background = ${colors.background}
 label-occupied-padding = 2
 
