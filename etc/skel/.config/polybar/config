@@ -2436,7 +2436,7 @@ format-prefix-foreground = #FFBB00
 
 [module/release]
 type = custom/script
-exec = (lsb_release -d | awk {'print $2'} ;echo " "; lsb_release -r | awk {'print $2'}) | tr -d '\n'
+exec = lsb_release -sir
 interval = 6000
 
 format-foreground = ${colors.foreground}
