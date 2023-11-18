@@ -56,7 +56,7 @@ case $desktop in
 
     bspwm|/usr/share/xsessions/bspwm)
     if type "xrandr" > /dev/null; then
-      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+      for m in $(bspc query -M --names); do
         MONITOR=$m polybar --reload mainbar-bspwm -c ~/.config/polybar/config.ini &
       done
     else
